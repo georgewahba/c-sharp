@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "L+KKpHoU83E7sHfE2R/Be9qAznWDz4CFCeBP8x1aHvad037ruAe6Q+prARsee6YBrO6qlQHJ0n2XSVF+16o/Aw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\steven\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\steven\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\steven\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
+    "C:\\Users\\steven\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}
