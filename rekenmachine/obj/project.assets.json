@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\beheerapplicatie.csproj",
-      "projectName": "beheerapplicatie",
-      "projectPath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\beheerapplicatie.csproj",
+      "projectUniqueName": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
+      "projectName": "RekenmachineCollege4",
+      "projectPath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
       "packagesPath": "C:\\Users\\steven\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\obj\\",
       "projectStyle": "PackageReference",
