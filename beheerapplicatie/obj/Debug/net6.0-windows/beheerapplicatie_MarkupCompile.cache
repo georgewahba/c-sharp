@@ -1,5 +1,5 @@
 ﻿beheerapplicatie
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\steven\Documents\dev\C#\c-sharp\beheerapplicatie\App.xaml
 11407045341
 
-8-630021258
+61342726371
 194-569031950
 MainWindow.xaml;
 
-False
+True
 

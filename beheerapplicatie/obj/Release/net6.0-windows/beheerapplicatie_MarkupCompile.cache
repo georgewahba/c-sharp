@@ -1,20 +1,20 @@
 ﻿beheerapplicatie
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\steven\Documents\dev\C#\c-sharp\beheerapplicatie\obj\Debug\net6.0-windows\
+C:\Users\steven\Documents\dev\C#\c-sharp\beheerapplicatie\obj\Release\net6.0-windows\
 beheerapplicatie
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\steven\Documents\dev\C#\c-sharp\beheerapplicatie\App.xaml
 11407045341
 
-8-630021258
+61342726371
 194-569031950
 MainWindow.xaml;
 
-False
+True
 
