@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace beheerapplicatie.models
 {
-    internal class Song
+    public class Song
     {
         public int Id { get; set; }
         public string Title { get; set; }
