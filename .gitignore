@@ -1,1 +1,6 @@
 *.vsidx
+*.dll
+*.json
+*.wsuo
+*.sqlite
+*.cache
