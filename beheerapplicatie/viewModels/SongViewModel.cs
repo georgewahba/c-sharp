@@ -32,7 +32,7 @@ namespace beheerapplicatie.viewModels
             Songs = new ObservableCollection<Song>
             {
                 new Song { Id = 1, Title = "Song 1", Artist = "Artist 1", Album = "Album 1" },
-                new Song { Id = 2, Title = "Song 2", Artist = "Artist 2", Album = "Album 2" },
+                new Song { Id = 2, Title = "Song 2", Artist = "Artist 2", Album = "Album 2" }
             };
         }
 

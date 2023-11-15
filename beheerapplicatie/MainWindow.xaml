@@ -20,5 +20,6 @@
 
         <Button Grid.Row="0" Grid.Column="0" Width="100" Content="Alle songs"/>
 
+		<Frame x:Name="MainFrame" Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>
