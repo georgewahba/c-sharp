@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L+KKpHoU83E7sHfE2R/Be9qAznWDz4CFCeBP8x1aHvad037ruAe6Q+prARsee6YBrO6qlQHJ0n2XSVF+16o/Aw==",
+  "dgSpecHash": "27mc7CTrGscm1152uh9qyIcc9wvlxxTzs6MVfo6iWk56G5XBUPF41RiTO8Uc4dAJQhMZ3Y1MZSSr1vDVey9l8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\steven\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\steven\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\steven\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
-    "C:\\Users\\steven\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.24\\microsoft.netcore.app.host.win-x64.6.0.24.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\RekenmachineCollege4.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

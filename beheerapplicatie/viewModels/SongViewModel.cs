@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace beheerapplicatie.viewModels
+namespace beheerapplicatie.ViewModels
 {
-    internal class SongViewModel : INotifyPropertyChanged
+    internal class SongViewModel : Song
     {
         private ObservableCollection<Song> songs;
 
@@ -31,8 +31,8 @@ namespace beheerapplicatie.viewModels
             // placeholder songs
             Songs = new ObservableCollection<Song>
             {
-                new Song { Id = 1, Title = "Song 1", Artist = "Artist 1", Album = "Album 1" },
-                new Song { Id = 2, Title = "Song 2", Artist = "Artist 2", Album = "Album 2" },
+                new Song { Id = 1, Title = "Song 1", Artist = "Artist 1"},
+                new Song { Id = 2, Title = "Song 2", Artist = "Artist 2"},
             };
         }
 

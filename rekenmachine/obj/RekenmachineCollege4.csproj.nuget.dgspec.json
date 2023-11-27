@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj": {}
+    "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\RekenmachineCollege4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj": {
+    "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\RekenmachineCollege4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
+        "projectUniqueName": "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\RekenmachineCollege4.csproj",
         "projectName": "RekenmachineCollege4",
-        "projectPath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\RekenmachineCollege4.csproj",
-        "packagesPath": "C:\\Users\\steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steven\\Documents\\dev\\C#\\c-sharp\\beheerapplicatie\\obj\\",
+        "projectPath": "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\RekenmachineCollege4.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\georg\\OneDrive - Windesheim Office365\\jaar_2\\c_sharp\\eind-opdracht\\c-sharp\\rekenmachine\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\steven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,24 +55,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.24, 6.0.24]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -81,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.310\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
