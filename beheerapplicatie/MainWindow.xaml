@@ -1,0 +1,42 @@
+﻿<Window x:Class="beheerapplicatie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:VM="clr-namespace:beheerapplicatie.ViewModels"
+        xmlns:local="clr-namespace:beheerapplicatie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="0.8*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <StackPanel.Background>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0.0" Color="#12293d"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Height" Value="40"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Songs"/>
+            <Button Content="Playlists"/>
+            <Button Content="Albums"/>
+            <Button Content="Artists"/>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.9*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Background="#12293d">
+            </Grid>
+            <Frame Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>

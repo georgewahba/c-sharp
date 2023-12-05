@@ -1,5 +1,4 @@
-﻿using beheerapplicatie.models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace beheerapplicatie
+namespace beheerapplicatie.Views
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for SongPage.xaml
+    /// </summary>
+    public partial class SongPage : Page
     {
-        public event EventHandler OnManageSongsClick;
-        private SongPage songPage;
-        public MainWindow()
+        public SongPage()
         {
             InitializeComponent();
-        }
-
-        private void OnManageSongs_Click(object sender, RoutedEventArgs e)
-        {
-            OnManageSongsClick?.Invoke(this, EventArgs.Empty);
         }
     }
 }
