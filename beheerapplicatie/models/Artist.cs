@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace beheerapplicatie.models
 {
-    internal class Album  : NotifyPropertyChanged
+    internal class Artist : NotifyPropertyChanged
     {
         private string name { get; set; }
         public string Name
@@ -18,6 +18,5 @@ namespace beheerapplicatie.models
                 OnPropertyChanged();
             }
         }
-        public List<Song> Songs { get; set; }
     }
 }

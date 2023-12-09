@@ -8,12 +8,28 @@ namespace beheerapplicatie.models
 {
     public class Song : NotifyPropertyChanged
     {
-        private string _title;
-        private string _artist;
-        public int Id { get; set; }
-        public string Title { get { return _title; } set { _title = value; RaisePropertyChange("Title"); } }
+        private string name;
+        public string Name
+        {
+            get => name;
+            set
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
 
+        private Artist artist;
+        public Artist Artist
+        {
+            get => artist;
 
-        public string Artist { get { return _artist; } set { _artist = value; RaisePropertyChange("Artist"); } }
+            set
+            {
+                artist = value;
+                OnPropertyChanged();
+            }
+        }
     }
+
 }
