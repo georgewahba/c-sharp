@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\georg\OneDrive - Windesheim Office365\jaar_2\c_sharp\eind-opdracht\c-sharp\beheerapplicatie\App.xaml
-2-1761764582
+5-660322867
 
-11-1981480293
+19-883206153
 195-768144059
-MainWindow.xaml;SongPage.xaml;
+MainWindow.xaml;Views\AlbumPage.xaml;Views\ArtistPage.xaml;Views\PlaylistPage.xaml;Views\SongPage.xaml;
 
-True
+False
 

@@ -7,15 +7,30 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="SongPage.xaml.cs">
+    <Compile Update="Views\AlbumPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ArtistPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PlaylistPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SongPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\AlbumPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SongPage.xaml">
+    <Page Update="Views\ArtistPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PlaylistPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SongPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
