@@ -20,16 +20,10 @@ namespace beheerapplicatie
 {
     public partial class MainWindow : Window
     {
-        public event EventHandler OnManageSongsClick;
-        private SongPage songPage;
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void OnManageSongs_Click(object sender, RoutedEventArgs e)
-        {
-            OnManageSongsClick?.Invoke(this, EventArgs.Empty);
         }
     }
 }
