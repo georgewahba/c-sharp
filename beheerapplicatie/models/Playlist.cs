@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace beheerapplicatie.models
 {
-    internal class Playlist : NotifyPropertyChanged
+    public class Playlist : NotifyPropertyChanged
     {
         private string name { get; set; }
         public string Name
