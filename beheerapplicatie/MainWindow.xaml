@@ -15,7 +15,7 @@
         <StackPanel Grid.Column="0">
             <StackPanel.Background>
                 <LinearGradientBrush>
-                    <GradientStop Offset="0.0" Color="#12293d"/>
+                    <GradientStop Offset="0.0" Color="gray"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
             <StackPanel.Resources>
@@ -34,7 +34,7 @@
                 <RowDefinition Height="0.1*"/>
                 <RowDefinition Height="0.9*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0" Background="#12293d">
+            <Grid Grid.Row="0" Background="gray">
             </Grid>
             <Frame Grid.Row="1" NavigationUIVisibility="Hidden"/>
         </Grid>
