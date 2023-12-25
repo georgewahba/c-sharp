@@ -19,5 +19,10 @@ namespace beheerapplicatie.models
                 OnPropertyChanged();
             }
         }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }
