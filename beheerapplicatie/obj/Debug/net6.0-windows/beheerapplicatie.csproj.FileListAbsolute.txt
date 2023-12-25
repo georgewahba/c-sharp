@@ -30,3 +30,35 @@ C:\Users\georg\OneDrive - Windesheim Office365\jaar_2\c_sharp\eind-opdracht\c-sh
 C:\Users\georg\OneDrive - Windesheim Office365\jaar_2\c_sharp\eind-opdracht\c-sharp\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.pdb
 C:\Users\georg\OneDrive - Windesheim Office365\jaar_2\c_sharp\eind-opdracht\c-sharp\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.genruntimeconfig.cache
 C:\Users\georg\OneDrive - Windesheim Office365\jaar_2\c_sharp\eind-opdracht\c-sharp\beheerapplicatie\obj\Debug\net6.0-windows\ref\beheerapplicatie.dll
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.csproj.AssemblyReference.cache
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\AlbumPage.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\ArtistPage.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\PlaylistPage.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\SongPage.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\App.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie_MarkupCompile.cache
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie_MarkupCompile.lref
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.dll
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\refint\beheerapplicatie.dll
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.pdb
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\beheerapplicatie.exe
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\beheerapplicatie.deps.json
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\beheerapplicatie.runtimeconfig.json
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\beheerapplicatie.dll
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\beheerapplicatie.pdb
+C:\Университет\Freelance\look\beheerapplicatie\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\AlbumPage.baml
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\ArtistPage.baml
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\PlaylistPage.baml
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\Views\SongPage.baml
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.g.resources
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.GeneratedMSBuildEditorConfig.editorconfig
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.AssemblyInfoInputs.cache
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.AssemblyInfo.cs
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.csproj.CoreCompileInputs.cache
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.csproj.CopyComplete
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\beheerapplicatie.genruntimeconfig.cache
+C:\Университет\Freelance\look\beheerapplicatie\obj\Debug\net6.0-windows\ref\beheerapplicatie.dll
