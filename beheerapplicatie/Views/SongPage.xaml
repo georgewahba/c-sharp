@@ -20,7 +20,7 @@
             <Label Content="Song Name" VerticalAlignment="Center"/>
             <TextBox Width="200" Height="25" Grid.Column="0" HorizontalAlignment="Right" VerticalContentAlignment="Center"  Text="{Binding SongToAdd}"/>
             <Label Content="Artist Name" VerticalAlignment="Center"/>
-            <ComboBox Width="150" Height="25" x:Name="ArtistComboBox" ItemsSource="{Binding ArtistNames}" SelectedItem="{Binding ArtistToAdd, UpdateSourceTrigger=PropertyChanged}"/>
+            <ComboBox Width="150" Height="25" x:Name="ArtistComboBox" ItemsSource="{Binding Artists}" SelectedItem="{Binding ArtistToAdd, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Content="AddSong" Width="100" Height="25" Command="{Binding AddSong}"/>
         </StackPanel>
         <ListView ItemsSource="{Binding MainViewModel.Songs}" Grid.Row="1" Background="Transparent">
