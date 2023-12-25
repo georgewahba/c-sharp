@@ -16,6 +16,8 @@ namespace beheerapplicatie.ViewModels
         public SongPageViewModel(MainViewModel mainViewModel)
         {
             this.mainViewModel = mainViewModel;
+
+            artists = mainViewModel.Artists;
         }
         public MainViewModel MainViewModel => mainViewModel;
         private string songToAdd { get; set; }
@@ -90,15 +92,6 @@ namespace beheerapplicatie.ViewModels
             }
         }
         
-        private RelayCommand artistSelectionChanged { get; set; }
-        public RelayCommand ArtistSelectionChanged
-        {
-            get => artistSelectionChanged ?? new RelayCommand(obj =>
-            {
-                string artistName = obj as string;
-                ArtistToAdd = artistName ?? String.Empty;
-            });
-        }
         // Deze functie zorgt ervoor dat de artiest wordt veranderd
         private RelayCommand changeArtist { get; set; }
         public RelayCommand ChangeArtist
