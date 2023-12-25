@@ -9,9 +9,7 @@
       Title="ArtistPage">
 
     <Page.Background>
-        <LinearGradientBrush>
-            <GradientStop Color="White"/>
-        </LinearGradientBrush>
+        <SolidColorBrush Color="White"/>
     </Page.Background>
     <Grid>
         <Grid.RowDefinitions>
@@ -19,11 +17,28 @@
             <RowDefinition Height="0.90*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <TextBox Width="200" Height="25" Grid.Column="0" HorizontalAlignment="Right" VerticalContentAlignment="Center" Margin="20,0,0,0"/>
-            <Button Content="AddArtist" Width="100" Height="25"/>
+            <TextBox Width="200" Height="25" Grid.Column="0" HorizontalAlignment="Right" VerticalContentAlignment="Center" Margin="20,0,0,0"  Text="{Binding ArtistToAdd}"/>
+            <Button Content="Add Artist" Width="100" Height="25" Command="{Binding AddArtist}"/>
         </StackPanel>
-        <ListView Grid.Row="1" Background="Transparent">
-
+        <ListView x:Name="ArtistsListView" ItemsSource="{Binding MainViewModel.Artists}" Grid.Row="1" Background="Transparent">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Delete">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Command="{Binding DataContext.DeleteArtist, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding Name}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
     </Grid>
 </Page>
