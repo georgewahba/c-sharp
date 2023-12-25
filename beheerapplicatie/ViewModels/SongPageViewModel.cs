@@ -89,7 +89,7 @@ namespace beheerapplicatie.ViewModels
                 OnPropertyChanged();
             }
         }
-        /
+        
         private RelayCommand artistSelectionChanged { get; set; }
         public RelayCommand ArtistSelectionChanged
         {
