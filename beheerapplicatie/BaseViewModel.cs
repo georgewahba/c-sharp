@@ -19,7 +19,7 @@ namespace beheerapplicatie
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
+        //Deze functie wordt gebruikt om een lijst van objecten te deserializen
         public void Serialize<T>(string fileName, ObservableCollection<T> collection)
         {
             try
