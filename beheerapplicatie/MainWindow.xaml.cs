@@ -1,4 +1,5 @@
 ﻿using beheerapplicatie.models;
+using beheerapplicatie.ViewModels;
 using beheerapplicatie.Views;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace beheerapplicatie
         public MainWindow()
         {
             InitializeComponent();
-
+            this.DataContext = new MainViewModel();
         }
     }
 }
