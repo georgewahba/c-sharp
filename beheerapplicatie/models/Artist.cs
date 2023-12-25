@@ -8,6 +8,7 @@ namespace beheerapplicatie.models
 {
     public class Artist : NotifyPropertyChanged
     {
+        //Artist model met een naam van de artiest
         private string name { get; set; }
         public string Name
         {
