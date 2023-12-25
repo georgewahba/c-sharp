@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace beheerapplicatie
 {
@@ -17,7 +18,14 @@ namespace beheerapplicatie
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            try
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
+            catch (StackOverflowException)
+            {
+                MessageBox.Show(propertyName);
+            }
         }
         //Deze functie wordt gebruikt om een lijst van objecten te deserializen
         public void Serialize<T>(string fileName, ObservableCollection<T> collection)
