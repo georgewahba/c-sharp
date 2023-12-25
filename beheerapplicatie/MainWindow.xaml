@@ -6,7 +6,7 @@
         xmlns:VM="clr-namespace:beheerapplicatie.ViewModels"
         xmlns:local="clr-namespace:beheerapplicatie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+           Title="MainWindow" Height="800" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -24,10 +24,10 @@
                     <Setter Property="Height" Value="40"/>
                 </Style>
             </StackPanel.Resources>
-            <Button Content="Songs"/>
-            <Button Content="Playlists"/>
-            <Button Content="Albums"/>
-            <Button Content="Artists"/>
+            <Button Content="Songs" Command="{Binding SongsButtonClicked}"/>
+            <Button Content="Playlists" Command="{Binding PlaylistsButtonClicked}"/>
+            <Button Content="Albums" Command="{Binding AlbumsButtonClicked}"/>
+            <Button Content="Artists" Command="{Binding ArtistsButtonClicked}"/>
         </StackPanel>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -35,8 +35,9 @@
                 <RowDefinition Height="0.9*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Background="gray">
+                <TextBlock Text="{Binding SelectedFrameStr}" FontSize="19" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </Grid>
-            <Frame Grid.Row="1" NavigationUIVisibility="Hidden"/>
+            <Frame Grid.Row="1" Content="{Binding FrameContent}" NavigationUIVisibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>
