@@ -52,46 +52,7 @@ namespace beheerapplicatie.ViewModels
                 OnPropertyChanged();
             }
         }
-        //Deze functie zorgt ervoor dat de artiest namen worden opgehaald uit de mainViewModel
-        private ObservableCollection<string> _artistNames { get; set; }
-        public ObservableCollection<string> ArtistNames
-        {
-            get
-            {
-                if (_artistNames == null || _artistNames.Count() == 0)
-                {
-                    if (artists == null)
-                    {
-                        if (mainViewModel.Artists != null)
-                        {
-                            artists = mainViewModel.Artists;
-                        }
-                        else
-                        {
-                            return null;
-                        }
-                    }
 
-                    var names = artists.Select(a => a.Name).ToList();
-                    if (_artistNames == null)
-                    {
-                        _artistNames = new ObservableCollection<string>();
-                    }
-                    foreach (var name in names)
-                    {
-                        _artistNames.Add(name);
-                    }
-                    OnPropertyChanged();
-                }
-                return _artistNames;
-            }
-            set
-            {
-                _artistNames = value;
-                OnPropertyChanged();
-            }
-        }
-        
         // Deze functie zorgt ervoor dat de artiest wordt veranderd
         private RelayCommand changeArtist { get; set; }
         public RelayCommand ChangeArtist
