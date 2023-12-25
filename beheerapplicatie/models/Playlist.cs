@@ -8,6 +8,7 @@ namespace beheerapplicatie.models
 {
     public class Playlist : NotifyPropertyChanged
     {
+        //Playlist model met een naam en een lijst van songs
         private string name { get; set; }
         public string Name
         {
