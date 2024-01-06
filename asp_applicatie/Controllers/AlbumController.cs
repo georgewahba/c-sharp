@@ -9,23 +9,23 @@ using asp_applicatie.Models;
 
 namespace asp_applicatie.Controllers
 {
-    public class AlbumsController : Controller
+    public class AlbumController : Controller
     {
         private readonly AspApplicatieDbContext _context;
 
-        public AlbumsController(AspApplicatieDbContext context)
+        public AlbumController(AspApplicatieDbContext context)
         {
             _context = context;
         }
 
-        // GET: Albums
+        // GET: Album
         public async Task<IActionResult> Index()
         {
             var aspApplicatieDbContext = _context.Albums.Include(a => a.artist);
             return View(await aspApplicatieDbContext.ToListAsync());
         }
 
-        // GET: Albums/Details/5
+        // GET: Album/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Albums == null)
@@ -44,14 +44,14 @@ namespace asp_applicatie.Controllers
             return View(album);
         }
 
-        // GET: Albums/Create
+        // GET: Album/Create
         public IActionResult Create()
         {
             ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId");
             return View();
         }
 
-        // POST: Albums/Create
+        // POST: Album/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -68,7 +68,7 @@ namespace asp_applicatie.Controllers
             return View(album);
         }
 
-        // GET: Albums/Edit/5
+        // GET: Album/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Albums == null)
@@ -85,7 +85,7 @@ namespace asp_applicatie.Controllers
             return View(album);
         }
 
-        // POST: Albums/Edit/5
+        // POST: Album/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -121,7 +121,7 @@ namespace asp_applicatie.Controllers
             return View(album);
         }
 
-        // GET: Albums/Delete/5
+        // GET: Album/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Albums == null)
@@ -140,7 +140,7 @@ namespace asp_applicatie.Controllers
             return View(album);
         }
 
-        // POST: Albums/Delete/5
+        // POST: Album/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
