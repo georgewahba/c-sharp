@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Data;
 using asp_applicatie.Models;
+using Microsoft.Extensions.Hosting.Internal;
 
 namespace asp_applicatie.Controllers
 {
@@ -163,6 +164,47 @@ namespace asp_applicatie.Controllers
         private bool SongExists(int id)
         {
           return (_context.Song?.Any(e => e.SongId == id)).GetValueOrDefault();
+        }
+
+        [HttpPost]
+        public List<string> UploadImage(IFormFile imageFile)
+        {
+            try
+            {
+                string uploadFolder = Path.Combine(hostingEnvironment.WebRootPath, "Songs");
+                string fileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+                string filePath = Path.Combine(uploadFolder, fileName);
+                imageFile.CopyTo(new FileStream(filePath, FileMode.Create));
+                var imagepath = $"/Songs/{fileName}";
+                return new List<string> { imagepath };
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddtoPlaylist([Bind("PlaylistSongId,PlaylistId,SongId,Status")] PlaylistSong playlistSong)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(playlistSong);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        public ActionResult Search(string searchString)
+        {
+            var suggestions = _context.Songs
+            .Where(s => s.Title.Contains(searchString))
+            .Select(s => s.Title)
+            .Distinct()
+            .ToList();
+
+            return Json(suggestions);
         }
     }
 }
