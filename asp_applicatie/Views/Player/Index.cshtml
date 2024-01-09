@@ -1,0 +1,158 @@
+﻿@model asp_applicatie.ViewModels.PlayListSongViewModel
+@{
+    ViewData["Title"] = "Index";
+    var index = ViewBag.SongId;
+}
+<style>
+    #musicPlayer {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    .fa-star {
+        color: #ffd700; /* Set the default star color to yellow */
+        cursor: pointer;
+    }
+
+    .fa-star-o {
+        color: #ccc; /* Set the default star outline color to gray */
+        cursor: pointer;
+    }
+</style>
+
+<audio controls id="musicPlayer">
+    <source id="audioSource" type="audio/mp3">
+</audio>
+
+<ul>
+    @if (Model.songs != null)
+    {
+        foreach (var song in Model.songs)
+        {
+            <li>
+                <div class="song-item" data-songid="@song.SongId" data-filepath="@song.AudioFilePath">
+                    @song.SongTitle
+                </div>
+                <div class="rating" data-songid="@song.SongId" data-user-rating="@song.Ratings">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <i class="fa fa-star" data-rating="@i"></i>
+                    }
+                </div>
+            </li>
+        }
+    }
+</ul>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+<script>
+    var audio = document.getElementById("musicPlayer");
+    var audioSource = document.getElementById("audioSource");
+    var songs = @Html.Raw(Json.Serialize(Model.songs?.Select(s => s.AudioFilePath) ?? new List<string>()));
+    var currentIndex = @index;
+
+    function playSong(index, filePath) {
+        // Play the selected song
+        audioSource.src = filePath;
+        audio.load(); // Reload the audio element to apply the new source
+        audio.play();
+        debugger;
+        $.ajax({
+            url: '/Users/SaveLastSongPlayed',
+            method: 'POST',
+            data: { lastPlayedSongId: index },
+            success: function (data) {
+                // Handle success if needed
+            },
+            error: function (error) {
+                console.error('Error saving last played song:', error);
+            }
+        });
+    }
+
+    // Attach click event to song items
+    $("body").on("click", ".song-item", function () {
+        var songId = $(this).data("songid");
+        var filePath = $(this).data("filepath");
+        playSong(songId, filePath);
+    });
+
+    // Star rating functionality
+    $("body").on("click", ".rating .fa-star, .rating .fa-star-o", function () {
+        var rating = $(this).data("rating");
+        var songId = $(this).closest("li").find(".song-item").data("songid");
+        debugger;
+        // Add logic to send the rating and songId to the controller
+        $.ajax({
+            url: '/Songs/SaveRatings', // Update the URL to your controller action
+            method: 'POST',
+            data: { songId: songId, rating: rating },
+            success: function (data) {
+                // Handle success if needed
+            },
+            error: function (error) {
+                console.error('Error submitting rating:', error);
+            }
+        });
+
+        // Update the star colors based on the selected rating
+        $(this).parent().children(".fa-star").removeClass("fa-star").addClass("fa-star-o");
+        $(this).removeClass("fa-star-o").addClass("fa-star");
+        $(this).prevAll(".fa-star").removeClass("fa-star").addClass("fa-star-o");
+    });
+
+    // Check if ViewBag.SongId is set, then play that song; otherwise, play the first song
+    $(document).ready(function () {
+        $(".rating").each(function () {
+            var userRating = parseInt($(this).data("user-rating"));
+            if (!isNaN(userRating)) {
+                var stars = $(this).find(".fa-star");
+                stars.removeClass("fa-star").addClass("fa-star-o"); // Reset all stars to outline style
+                stars.slice(0, userRating).removeClass("fa-star-o").addClass("fa-star"); // Fill stars up to user's rating
+                stars.each(function (index) {
+                    // Update the data-rating attribute based on the current index + 1
+                    $(this).attr("data-rating", index + 1);
+                });
+            } else {
+                // Handle the case when userRating is null (or not a number)
+                // For example, you can set a default behavior, like showing all stars as blank
+                $(this).find(".fa-star").removeClass("fa-star").addClass("fa-star-o");
+            }
+        });
+        if (@index != null) {
+            var initialIndex = songs.findIndex(function (path) {
+                return path === '@Model.songs?.FirstOrDefault(s => s.SongId == ViewBag.SongId)?.AudioFilePath';
+            });
+            if (initialIndex !== -1) {
+                // If the song corresponding to ViewBag.SongId is found, play it
+                playSong(@index, songs[initialIndex]);
+            } else {
+                // If not found, default to playing the first song
+                playSong(0, songs[0]);
+            }
+        } else if (songs.length > 0) {
+            // Automatically play the first song when the page loads
+            playSong(0, songs[0]);
+        }
+    });
+
+    audio.addEventListener("ended", function () {
+        // Play the next song when the current one ends
+        currentIndex = (currentIndex + 1) % songs.length;
+        audioSource.src = songs[currentIndex];
+        audio.load(); // Reload the audio element to apply the new source
+        audio.play();
+    });
+</script>

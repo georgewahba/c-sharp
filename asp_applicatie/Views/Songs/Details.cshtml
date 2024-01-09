@@ -1,54 +1,41 @@
-﻿@model asp_applicatie.Models.Song
+﻿@model asp_applicatie.Models.PlaylistSong
 
 @{
+    var playlists = ViewData["Playlists"] as List<SelectListItem>;
+    var SongId = ViewBag.Id;
+
     ViewData["Title"] = "Details";
+
+    SelectList GetPlaylistItems()
+    {
+        return new SelectList(playlists, "Value", "Text");
+    }
 }
 
-<h1>Details</h1>
+<h1>Add to Favourite</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddtoPlaylist">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SongId" value="@ViewBag.Id" />
+            <input type="hidden" asp-for="Status" value="1" />
+
+            <div class="form-group">
+                <label asp-for="PlaylistId" class="control-label">Select Playlist</label>
+                <select asp-for="PlaylistId" asp-items="@GetPlaylistItems()" class="form-control"></select>
+                <span asp-validation-for="PlaylistId" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
 <div>
-    <h4>Song</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AudioFilePath)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AudioFilePath)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Duration)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Duration)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ratings)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ratings)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.album)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.album.AlbumId)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.SongId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
