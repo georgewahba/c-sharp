@@ -76,8 +76,7 @@ namespace asp_applicatie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PlaylistSongId,PlaylistId,SongId,Status")] PlaylistSong playlistSong)
-        {
-            playlistSong.Status = 1;
+        {playlistSong.Status = 1;
             if (ModelState.IsValid)
             {
                 _context.Add(playlistSong);
@@ -171,14 +170,14 @@ namespace asp_applicatie.Controllers
             {
                 _context.PlaylistSongs.Remove(playlistSong);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PlaylistSongExists(int id)
         {
-            return (_context.PlaylistSongs?.Any(e => e.PlaylistSongId == id)).GetValueOrDefault();
+          return (_context.PlaylistSongs?.Any(e => e.PlaylistSongId == id)).GetValueOrDefault();
         }
     }
 }

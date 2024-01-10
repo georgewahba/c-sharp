@@ -21,9 +21,9 @@ namespace asp_applicatie.Controllers
         // GET: Artist
         public async Task<IActionResult> Index()
         {
-            return _context.Artists != null ?
-                        View(await _context.Artists.ToListAsync()) :
-                        Problem("Entity set 'AspApplicatieDbContext.Artists'  is null.");
+              return _context.Artists != null ? 
+                          View(await _context.Artists.ToListAsync()) :
+                          Problem("Entity set 'AspApplicatieDbContext.Artists'  is null.");
         }
 
         // GET: Artist/Details/5
@@ -149,14 +149,14 @@ namespace asp_applicatie.Controllers
             {
                 _context.Artists.Remove(artist);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ArtistExists(int id)
         {
-            return (_context.Artists?.Any(e => e.ArtistId == id)).GetValueOrDefault();
+          return (_context.Artists?.Any(e => e.ArtistId == id)).GetValueOrDefault();
         }
     }
 }

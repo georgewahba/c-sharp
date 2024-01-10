@@ -88,7 +88,7 @@ namespace asp_applicatie.Controllers
             }
 
             var playlist = await _context.Playlists.FindAsync(id);
-
+            
             int userId = GeneralInformation.UId;
             ViewBag.UserId = userId;
             return View(playlist);
@@ -103,18 +103,18 @@ namespace asp_applicatie.Controllers
         {
             playlist.Status = 1;
 
-            if (playlist.PlaylistId == 0) // PlaylistId is zero, add a new entry
-            {
-                _context.Add(playlist);
-            }
-            else // PlaylistId is non-zero, update the existing entry
-            {
-                _context.Update(playlist);
-            }
+                if (playlist.PlaylistId == 0) // PlaylistId is zero, add a new entry
+                {
+                    _context.Add(playlist);
+                }
+                else // PlaylistId is non-zero, update the existing entry
+                {
+                    _context.Update(playlist);
+                }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            
         }
 
         // GET: Playlist/Delete/5
@@ -149,14 +149,14 @@ namespace asp_applicatie.Controllers
             {
                 _context.Playlists.Remove(playlist);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PlaylistExists(int id)
         {
-            return (_context.Playlists?.Any(e => e.PlaylistId == id)).GetValueOrDefault();
+          return (_context.Playlists?.Any(e => e.PlaylistId == id)).GetValueOrDefault();
         }
     }
 }

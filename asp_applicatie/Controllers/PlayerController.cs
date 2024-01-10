@@ -42,7 +42,7 @@ namespace asp_applicatie.Controllers
                 ViewBag.SongId = id;
                 return View(viewModel);
             }
-            else if (AlbumId != 0)
+            else if(AlbumId != 0)
             {
                 var viewModel = await _context.Albums
            .Where(p => p.AlbumId == AlbumId)
@@ -66,13 +66,13 @@ namespace asp_applicatie.Controllers
             else
             {
                 PlayListSongViewModel playlistSong = new PlayListSongViewModel();
-                if (id == 0)
+                if(id == 0)
                 {
                     id = GeneralInformation.LastPlayedSongId;
                 }
                 var song = await _context.Songs
                                 .FirstOrDefaultAsync(m => m.SongId == id);
-                if (song != null)
+                if(song != null)
                 {
                     playlistSong = new PlayListSongViewModel
                     {
@@ -91,7 +91,7 @@ namespace asp_applicatie.Controllers
                     }
                     };
                 }
-
+                
                 ViewBag.SongId = id;
                 return View(playlistSong);
             }

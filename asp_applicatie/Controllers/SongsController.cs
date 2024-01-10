@@ -95,8 +95,7 @@ namespace asp_applicatie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("SongId,Title,AudioFilePath,Artist,AlbumId,Duration,Status")] Song song)
-        {
-            song.Status = 1;
+        {song.Status = 1;
             if (ModelState.IsValid)
             {
                 _context.Add(song);
@@ -192,14 +191,14 @@ namespace asp_applicatie.Controllers
             {
                 _context.Songs.Remove(song);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SongExists(int id)
         {
-            return (_context.Songs?.Any(e => e.SongId == id)).GetValueOrDefault();
+          return (_context.Songs?.Any(e => e.SongId == id)).GetValueOrDefault();
         }
 
         [HttpPost]

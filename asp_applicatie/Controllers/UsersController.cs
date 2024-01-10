@@ -115,8 +115,7 @@ namespace asp_applicatie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId,Username,Password,FullName,LastPlayedSongId,Status")] User user)
-        {
-            user.Status = 1;
+        {user.Status = 1;
             if (ModelState.IsValid)
             {
                 _context.Add(user);
@@ -210,15 +209,15 @@ namespace asp_applicatie.Controllers
             {
                 _context.Users.Remove(user);
             }
-
+            
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UserExists(int id)
         {
-            return (_context.Users?.Any(e => e.UserId == id)).GetValueOrDefault();
+          return (_context.Users?.Any(e => e.UserId == id)).GetValueOrDefault();
         }
-
+        
     }
 }
