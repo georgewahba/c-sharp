@@ -1347,8 +1347,6 @@ C:\Users\steven\Downloads\asp_applicatie (2)\asp_applicatie (1)\asp_applicatie\o
 C:\Users\steven\Downloads\asp_applicatie (2)\asp_applicatie (1)\asp_applicatie\obj\Debug\net7.0\asp_applicatie.pdb
 C:\Users\steven\Downloads\asp_applicatie (2)\asp_applicatie (1)\asp_applicatie\obj\Debug\net7.0\asp_applicatie.genruntimeconfig.cache
 C:\Users\steven\Downloads\asp_applicatie (2)\asp_applicatie (1)\asp_applicatie\obj\Debug\net7.0\ref\asp_applicatie.dll
-C:\Users\steven\Documents\dev\C#\c-sharp\asp_applicatie\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\steven\Documents\dev\C#\c-sharp\asp_applicatie\bin\Debug\net7.0\appsettings.json
 C:\Users\steven\Documents\dev\C#\c-sharp\asp_applicatie\bin\Debug\net7.0\asp_applicatie.staticwebassets.runtime.json
 C:\Users\steven\Documents\dev\C#\c-sharp\asp_applicatie\bin\Debug\net7.0\asp_applicatie.exe
 C:\Users\steven\Documents\dev\C#\c-sharp\asp_applicatie\bin\Debug\net7.0\asp_applicatie.deps.json
