@@ -1,12 +1,20 @@
 using asp_applicatie.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AspApplicatieDbContext>();
+
+// Add authentication services
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "YourCookieName";
+        options.LoginPath = "/";
+    });
 
 var app = builder.Build();
 
@@ -23,6 +31,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Add authentication middleware
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

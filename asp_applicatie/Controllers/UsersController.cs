@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace asp_applicatie.Controllers
 {
@@ -27,13 +31,18 @@ namespace asp_applicatie.Controllers
         {
             return View();
         }
+
         public IActionResult Logout()
         {
             GeneralInformation.UId = 0;
             GeneralInformation.UserName = "";
             GeneralInformation.LastPlayedSongId = 0;
-            return RedirectToAction("Index", "Users");
+
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                return Redirect("/");
         }
+
         [HttpPost]
         public string SaveLastSongPlayed(int lastPlayedSongId)
         {
@@ -64,6 +73,25 @@ namespace asp_applicatie.Controllers
             {
                 return NotFound();
             }
+
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, user.Username),
+        new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+    };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties);
+
             GeneralInformation.UId = user.UserId;
             GeneralInformation.UserName = user.Username;
             GeneralInformation.LastPlayedSongId = user.LastPlayedSongId;

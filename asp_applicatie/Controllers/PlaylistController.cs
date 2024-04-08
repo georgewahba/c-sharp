@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using asp_applicatie.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace asp_applicatie.Controllers
 {
+    [Authorize]
     public class PlaylistController : Controller
     {
         private readonly AspApplicatieDbContext _context;

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Models;
 using asp_applicatie.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace asp_applicatie.Controllers
 {
+    [Authorize]
     public class PlaylistSongsController : Controller
     {
         private readonly AspApplicatieDbContext _context;

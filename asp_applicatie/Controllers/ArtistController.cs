@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace asp_applicatie.Controllers
 {
+    [Authorize]
     public class ArtistController : Controller
     {
         private readonly AspApplicatieDbContext _context;
