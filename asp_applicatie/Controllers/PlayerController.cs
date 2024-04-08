@@ -1,10 +1,12 @@
 ﻿using asp_applicatie.Models;
 using asp_applicatie.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace asp_applicatie.Controllers
 {
+    [Authorize]
     public class PlayerController : Controller
     {
         private readonly AspApplicatieDbContext _context;

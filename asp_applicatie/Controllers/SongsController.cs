@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using asp_applicatie.Models;
 using Microsoft.Extensions.Hosting.Internal;
 using asp_applicatie.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace asp_applicatie.Controllers
 {
+    [Authorize]
     public class SongsController : Controller
     {
         private readonly IWebHostEnvironment hostingEnvironment;
