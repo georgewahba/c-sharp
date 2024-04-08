@@ -7,7 +7,7 @@ public partial class Song
 {
     public int SongId { get; set; }
 
-    public string? Title { get; set; }
+    public string? SongTitle { get; set; }
 
     public string? AudioFilePath { get; set; }
 
