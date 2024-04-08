@@ -1,0 +1,140 @@
+[
+  {
+    "Name": "languages",
+    "Songs": [
+      {
+        "Name": "love c",
+        "Artist": {
+          "Name": "george"
+        }
+      },
+      {
+        "Name": "love php",
+        "Artist": {
+          "Name": "george"
+        }
+      },
+      {
+        "Name": "mister hacker",
+        "Artist": {
+          "Name": "tom "
+        }
+      }
+    ]
+  },
+  {
+    "Name": "algorithms",
+    "Songs": [
+      {
+        "Name": "coding dreams",
+        "Artist": {
+          "Name": "steven"
+        }
+      },
+      {
+        "Name": "algorithmic symphony",
+        "Artist": {
+          "Name": "sam"
+        }
+      },
+      {
+        "Name": "binary melody",
+        "Artist": {
+          "Name": "lucy"
+        }
+      }
+    ]
+  },
+  {
+    "Name": "programming",
+    "Songs": [
+      {
+        "Name": "function fables",
+        "Artist": {
+          "Name": "alex"
+        }
+      },
+      {
+        "Name": "recursive echoes",
+        "Artist": {
+          "Name": "sarah"
+        }
+      },
+      {
+        "Name": "loop serenade",
+        "Artist": {
+          "Name": "michael"
+        }
+      }
+    ]
+  },
+  {
+    "Name": "code",
+    "Songs": [
+      {
+        "Name": "debugging ballad",
+        "Artist": {
+          "Name": "olivia"
+        }
+      },
+      {
+        "Name": "syntax sonnet",
+        "Artist": {
+          "Name": "david"
+        }
+      },
+      {
+        "Name": "variable waltz",
+        "Artist": {
+          "Name": "hannah"
+        }
+      }
+    ]
+  },
+  {
+    "Name": "computer science",
+    "Songs": [
+      {
+        "Name": "semantic lullaby",
+        "Artist": {
+          "Name": "chris"
+        }
+      },
+      {
+        "Name": "API melody",
+        "Artist": {
+          "Name": "jessica"
+        }
+      },
+      {
+        "Name": "database rhythm",
+        "Artist": {
+          "Name": "matthew"
+        }
+      }
+    ]
+  },
+  {
+    "Name": "software",
+    "Songs": [
+      {
+        "Name": "server suite",
+        "Artist": {
+          "Name": "laura"
+        }
+      },
+      {
+        "Name": "interface aria",
+        "Artist": {
+          "Name": "james"
+        }
+      },
+      {
+        "Name": "dreamy algorithm",
+        "Artist": {
+          "Name": "george"
+        }
+      }
+    ]
+  }
+]
